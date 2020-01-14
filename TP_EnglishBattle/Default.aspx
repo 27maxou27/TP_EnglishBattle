@@ -2,41 +2,70 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <style type="text/css">
+        .auto-style1 {
+            height: 197px;
+        }
+
+        .center {
+            float : none;
+            margin : 0 auto;
+        }
+
+        .auto-style2 {
+            /*display: block;*/
+            padding: 6px 12px;
+            /*font-size: 14px;*/
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            margin-right: 10px;
+            margin-top: 50px;
+            align-content: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+    </style>
+
+    <div class="form-group row">
+        <div class="col text-center">
+            <asp:Label runat="server" ID="Score"></asp:Label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col text-center">
+            <asp:Label runat="server" ID="Question"></asp:Label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="text-center">
+            <div class="col-md-4 text-center ">
+                <asp:TextBox runat="server" ID="Preterit" CssClass="auto-style2" Width="287px" />
+            </div>
+            <div class="col-md-3 col-md-offset-3 text-center ">
+                <asp:TextBox runat="server" ID="ParticipeP" CssClass="auto-style2" Width="287px" />
+            </div>
+
+            <%-- <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName"
+                                CssClass="text-danger" ErrorMessage="Le champ du nom d'utilisateur est obligatoire." />--%>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col text-center">
+
+            <asp:Button ID="Submit" runat="server" OnClick="Submit_OnClick" Text="Envoyer" CssClass="btn btn-default" />
+
+        </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
+
+
+
 
 </asp:Content>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="91c3aefc8e184a4fa80e2bcfba2a2d21" Name="Diagram1">
+        <EntityTypeShape EntityType="EnglishBattle2Model.Joueur" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnglishBattle2Model.Partie" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnglishBattle2Model.Question" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnglishBattle2Model.Verbe" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnglishBattle2Model.Ville" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="EnglishBattle2Model.FK_Joueur_Ville" ManuallyRouted="false" />
+        <AssociationConnector Association="EnglishBattle2Model.FK_Partie_Joueur" ManuallyRouted="false" />
+        <AssociationConnector Association="EnglishBattle2Model.FK_Question_Partie" ManuallyRouted="false" />
+        <AssociationConnector Association="EnglishBattle2Model.FK_Question_Question" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

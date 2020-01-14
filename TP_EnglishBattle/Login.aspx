@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TP_EnglishBattle.Login1" %>
 
 <asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="Server">
 
@@ -51,11 +51,10 @@
         <%--Boutton submit--%>
         <div class="form-group row">
             <div class="col-md-4 col-md-offset-4">
-                <asp:Button ID="btn_submit" runat="server" Text="Valider" CausesValidation="true" OnClick="btn_submit_Click" CssClass="btn btn-default"/>
+                <asp:Button ID="btn_submit" runat="server" Text="Valider" CausesValidation="true" OnClick="btn_submit_OnClick" CssClass="btn btn-default"/>
             </div>
         </div>
 
     </div>
 
 </asp:Content>
-

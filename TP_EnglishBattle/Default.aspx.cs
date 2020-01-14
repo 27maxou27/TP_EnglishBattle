@@ -13,5 +13,10 @@ namespace TP_EnglishBattle
         {
 
         }
+
+        protected void Submit_OnClick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

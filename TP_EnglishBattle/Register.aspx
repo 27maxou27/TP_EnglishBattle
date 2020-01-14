@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Register" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="TP_EnglishBattle.Register1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="Server">
 
-    <div class="form-horisontal content-wrapper">
+    <div class="form-horizontal content-wrapper">
 
         <h1>Inscription</h1>
 
@@ -95,7 +95,7 @@
             <div class="col-md-4">
                 <asp:Label ID="lbl_niveau" runat="server" AssociatedControlID="ddl_niveau" CssClass="control-label">Niveau:</asp:Label>
             </div>
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-4 <%--col-md-offset-4--%>">
                 <asp:DropDownList ID="ddl_niveau" runat="server" CssClass="form-control"></asp:DropDownList>
             </div>
         </div>
@@ -117,7 +117,7 @@
             <div class="col-md-4">
                 <asp:Label ID="lbl_ville" runat="server" AssociatedControlID="ddl_ville" CssClass="control-label">Ville:</asp:Label>
             </div>
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-4 <%--col-md-offset-4--%>">
                 <asp:DropDownList ID="ddl_ville" runat="server" CssClass="form-control"></asp:DropDownList>
             </div>
         </div>
@@ -137,7 +137,7 @@
         <%--Boutton submit--%>
         <div class="form-group row">
             <div class="col-md-4 col-md-offset-4">
-                <asp:Button ID="btn_submit" runat="server" Text="Valider" CausesValidation="true" OnClick="btn_submit_Click"/>
+                <asp:Button ID="btn_submit" runat="server" Text="Valider" CausesValidation="true" OnClick="btn_submit_OnClick"/>
             </div>
         </div>
 
@@ -145,4 +145,3 @@
     </div>
 
 </asp:Content>
-

@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/TP_EnglishBattle
+/LocalDatabase.Debug/obj/Debug
+/TP_EnglishBattle.Data/obj/Debug/TempPE
+/TP_EnglishBattle.Data/obj/Debug/TP_EnglishBattle.Data.csprojAssemblyReference.cache
+/TP_EnglishBattle.Data/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
