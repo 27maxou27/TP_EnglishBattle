@@ -1,0 +1,5 @@
+C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle.Data\bin\Debug\netstandard2.0\TP_EnglishBattle.Data.deps.json
+C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle.Data\bin\Debug\netstandard2.0\TP_EnglishBattle.Data.dll
+C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle.Data\obj\Debug\netstandard2.0\TP_EnglishBattle.Data.csprojAssemblyReference.cache
+C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle.Data\obj\Debug\netstandard2.0\TP_EnglishBattle.Data.AssemblyInfoInputs.cache
+C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle.Data\obj\Debug\netstandard2.0\TP_EnglishBattle.Data.AssemblyInfo.cs
