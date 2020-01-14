@@ -72,3 +72,6 @@ C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle\bin\E
 C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle\bin\EntityFramework.SqlServer.dll
 C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle\bin\EntityFramework.xml
 C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle\bin\EntityFramework.SqlServer.xml
+C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle\bin\TP_EnglishBattle.Data.dll
+C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle\bin\TP_EnglishBattle.Data.pdb
+C:\Users\maximilien.dandres\source\repos\TP_EnglishBattle\TP_EnglishBattle\bin\TP_EnglishBattle.Data.dll.config

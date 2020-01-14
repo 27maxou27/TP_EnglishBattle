@@ -4,12 +4,3 @@
 
 /.vs
 /packages
-
-/LocalDatabase.Debug/obj/*
-/LocalDatabase.Debug/bin/*
-
-/TP_EnglishBattle.Data/obj/*
-/TP_EnglishBattle.Data/bin/*
-
-/TP_EnglishBattle/obj/*
-/TP_EnglishBattle/bin/*
