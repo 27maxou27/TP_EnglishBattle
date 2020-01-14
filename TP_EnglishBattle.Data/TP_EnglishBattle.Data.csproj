@@ -78,6 +78,7 @@
     <Compile Include="Question.cs">
       <DependentUpon>EnglishBattleModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Service\JoueurService.cs" />
     <Compile Include="Verbe.cs">
       <DependentUpon>EnglishBattleModel.tt</DependentUpon>
     </Compile>
