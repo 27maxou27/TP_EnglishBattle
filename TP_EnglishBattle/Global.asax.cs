@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
@@ -16,6 +17,17 @@ namespace TP_EnglishBattle
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        void Application_BeginRequest(object sender, EventArgs e)
+        {
+            string absolutepath = HttpContext.Current.Request.Url.AbsolutePath;
+            Debug.WriteLine(absolutepath);
+
+            //if (absolutepath == "/Login")
+            //{
+            //    Response.Redirect("Register.aspx");
+            //}
         }
     }
 }

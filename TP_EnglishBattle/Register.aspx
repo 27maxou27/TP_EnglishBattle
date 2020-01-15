@@ -96,10 +96,15 @@
                 <asp:Label ID="lbl_niveau" runat="server" AssociatedControlID="ddl_niveau" CssClass="control-label">Niveau:</asp:Label>
             </div>
             <div class="col-md-4 <%--col-md-offset-4--%>">
-                <asp:DropDownList ID="ddl_niveau" runat="server" CssClass="form-control"></asp:DropDownList>
+                <asp:DropDownList ID="ddl_niveau" runat="server" CssClass="form-control">
+                    <asp:ListItem Text="-- Choisir --" Value="" Selected="True"></asp:ListItem>
+                    <asp:ListItem Text="Débutant" Value="0"></asp:ListItem>
+                    <asp:ListItem Text="Intermédiaire" Value="1"></asp:ListItem>
+                    <asp:ListItem Text="Expert" Value="2"></asp:ListItem>
+                </asp:DropDownList>
             </div>
         </div>
-        <%--Validation Mot de passe--%>
+        <%--Validation Niveau--%>
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <asp:RequiredFieldValidator ID="rfv_niveau"
@@ -118,10 +123,12 @@
                 <asp:Label ID="lbl_ville" runat="server" AssociatedControlID="ddl_ville" CssClass="control-label">Ville:</asp:Label>
             </div>
             <div class="col-md-4 <%--col-md-offset-4--%>">
-                <asp:DropDownList ID="ddl_ville" runat="server" CssClass="form-control"></asp:DropDownList>
+                <asp:DropDownList ID="ddl_ville" runat="server" CssClass="form-control">
+                    <asp:ListItem Text="-- Choisir --" Value="" Selected="True"></asp:ListItem>
+                </asp:DropDownList>
             </div>
         </div>
-        <%--Validation Mot de passe--%>
+        <%--Validation Ville--%>
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <asp:RequiredFieldValidator ID="rfv_ville"
@@ -137,7 +144,7 @@
         <%--Boutton submit--%>
         <div class="form-group row">
             <div class="col-md-4 col-md-offset-4">
-                <asp:Button ID="btn_submit" runat="server" Text="Valider" CausesValidation="true" OnClick="btn_submit_OnClick"/>
+                <asp:Button ID="btn_submit" runat="server" Text="Valider" CausesValidation="true" OnClick="Btn_submit_OnClick"/>
             </div>
         </div>
 
