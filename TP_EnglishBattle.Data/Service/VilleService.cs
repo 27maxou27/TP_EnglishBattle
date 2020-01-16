@@ -8,7 +8,7 @@ namespace TP_EnglishBattle.Data.Service
 {
     public class VilleService
     {
-        private EnglishBattle2Entities _context;
+        private readonly EnglishBattle2Entities _context;
 
         public VilleService()
         {

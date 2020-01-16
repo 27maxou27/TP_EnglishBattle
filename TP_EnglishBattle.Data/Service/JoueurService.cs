@@ -9,7 +9,7 @@ namespace TP_EnglishBattle.Data.Service
 {
     public class JoueurService
     {
-        private EnglishBattle2Entities _context;
+        private readonly EnglishBattle2Entities _context;
 
         public JoueurService()
         {
