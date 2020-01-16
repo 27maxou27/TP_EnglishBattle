@@ -11,8 +11,26 @@ namespace TP_EnglishBattle
 {
 
 
-    public partial class Login1
+    public partial class Login
     {
+
+        /// <summary>
+        /// alert_success control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_success;
+
+        /// <summary>
+        /// alert_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_email;
 
         /// <summary>
         /// lbl_email control.
@@ -76,5 +94,23 @@ namespace TP_EnglishBattle
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_submit;
+
+        /// <summary>
+        /// cb_remember control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cb_remember;
+
+        /// <summary>
+        /// hl_register control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hl_register;
     }
 }

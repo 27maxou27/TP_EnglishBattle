@@ -11,7 +11,10 @@ namespace TP_EnglishBattle
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Request.IsAuthenticated)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void Submit_OnClick(object sender, EventArgs e)

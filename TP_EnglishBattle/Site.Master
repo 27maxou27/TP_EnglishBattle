@@ -12,7 +12,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -52,20 +52,42 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Acceuil</a></li>
                     </ul>
-                    
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a runat="server" href="~/Register">Inscrire</a></li>
-                        <li><a runat="server" href="~/Login">Se connecter</a></li>
-                    </ul>
+
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Register">Inscrire</a></li>
+                                <li><a runat="server" href="~/Login">Se connecter</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <% if (this._joueur != null)
+                                    { %>
+                                <li>
+                                    <p class="navbar-text">Bienvenue, <%= _joueur.prenom %></p>
+                                </li>
+                                <li><p class="navbar-text">|</p></li>
+                                <% } %>
+                                <li>
+                                    <asp:LinkButton ID="lkb_disconnect" runat="server" Text="Déconnexion" OnClick="lkb_disconnect_Click"></asp:LinkButton>
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
                 </div>
             </div>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+                <%-- Page inserée ici --%>
             </asp:ContentPlaceHolder>
+
             <hr />
+
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>TP English Battle - &copy; <%: DateTime.Now.Year %> - EPSI B3/1</p>
             </footer>
         </div>
 

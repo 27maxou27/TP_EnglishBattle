@@ -22,11 +22,12 @@ namespace TP_EnglishBattle
         void Application_BeginRequest(object sender, EventArgs e)
         {
             string absolutepath = HttpContext.Current.Request.Url.AbsolutePath;
+
             Debug.WriteLine(absolutepath);
 
-            //if (absolutepath == "/Login")
+            //if (Request.IsAuthenticated)
             //{
-            //    Response.Redirect("Register.aspx");
+            //    //
             //}
         }
     }

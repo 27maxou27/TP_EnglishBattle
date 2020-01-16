@@ -5,27 +5,45 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Configuration;
 using TP_EnglishBattle.Data;
 using TP_EnglishBattle.Data.Service;
 
 namespace TP_EnglishBattle
 {
-    public partial class Register1 : System.Web.UI.Page
+    public partial class Register : System.Web.UI.Page
     {
-        private JoueurService _service;
+        private JoueurService _joueurService;
+        private VilleService _villeService;
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            _service = new JoueurService();
+            if (Request.IsAuthenticated)
+            {
+                Response.Redirect("Default.aspx");
+            }
+
+            _joueurService = new JoueurService();
+            _villeService = new VilleService();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
             if (!IsPostBack)
             {
+                try
+                {
+                    ddl_ville.DataSource = _villeService.GetList();
+                    ddl_ville.DataTextField = "nom";
+                    ddl_ville.DataValueField = "id";
+                    ddl_ville.DataBind();
+                    ddl_ville.Items.Insert(0, "-- Choisir ville --");
+                }
+                catch (Exception)
+                {
 
+                    throw;
+                }
             }
         }
 
@@ -50,9 +68,10 @@ namespace TP_EnglishBattle
                     idVille = Convert.ToInt32(ddl_ville.SelectedValue),
                 };
 
-                _service.Insert(joueur);
+                _joueurService.Insert(joueur);
 
-                FormsAuthentication.SetAuthCookie(txt_email.Text, true);
+                Session.Add("added_user", joueur.email);
+                FormsAuthentication.RedirectToLoginPage();
             }
             catch (Exception)
             {

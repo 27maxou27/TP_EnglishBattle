@@ -32,5 +32,22 @@ textarea {
 .content-wrapper {
     float: none;
     margin: 0 auto;
-    width: 500px;
+    width: 600px;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+#title {
+    margin-bottom: 40px;
+}
+
+html, body {
+    min-height: 100vh !important;
+}
+
+.alert {
+    margin-top: 5px;
 }

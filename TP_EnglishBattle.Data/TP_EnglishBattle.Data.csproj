@@ -71,6 +71,7 @@
     <Compile Include="Joueur.cs">
       <DependentUpon>EnglishBattleModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\InfoJoueur.cs" />
     <Compile Include="Partie.cs">
       <DependentUpon>EnglishBattleModel.tt</DependentUpon>
     </Compile>
@@ -79,6 +80,7 @@
       <DependentUpon>EnglishBattleModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Service\JoueurService.cs" />
+    <Compile Include="Service\VilleService.cs" />
     <Compile Include="Verbe.cs">
       <DependentUpon>EnglishBattleModel.tt</DependentUpon>
     </Compile>

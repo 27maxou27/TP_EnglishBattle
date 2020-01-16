@@ -11,8 +11,26 @@ namespace TP_EnglishBattle
 {
 
 
-    public partial class Register1
+    public partial class Register
     {
+
+        /// <summary>
+        /// alert_error_conn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_error_conn;
+
+        /// <summary>
+        /// alert_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_email;
 
         /// <summary>
         /// lbl_nom control.
@@ -123,13 +141,22 @@ namespace TP_EnglishBattle
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_mdp;
 
         /// <summary>
-        /// lbl_niveau control.
+        /// ddl_ville control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_niveau;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_ville;
+
+        /// <summary>
+        /// rfv_ville control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_ville;
 
         /// <summary>
         /// ddl_niveau control.
@@ -148,33 +175,6 @@ namespace TP_EnglishBattle
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_niveau;
-
-        /// <summary>
-        /// lbl_ville control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_ville;
-
-        /// <summary>
-        /// ddl_ville control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_ville;
-
-        /// <summary>
-        /// rfv_ville control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_ville;
 
         /// <summary>
         /// btn_submit control.
