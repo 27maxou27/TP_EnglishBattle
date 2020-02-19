@@ -2,6 +2,30 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #757F9A; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+hr {
+    border-color: black;
+}
+
+#main-title {
+    margin-bottom: 10px;
+}
+
+#timer {
+    /*height: 10vh;*/
+}
+
+#footer {
+    /*position: fixed;
+    bottom: 0;
+    left: 0;*/
+    /*height: 75px;*/
+    width: 100%;
+    text-align: center;
 }
 
 /* Wrapping element */
@@ -41,7 +65,7 @@ textarea {
 }
 
 #title {
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
 }
 
 html, body {
@@ -50,4 +74,65 @@ html, body {
 
 .alert {
     margin-top: 5px;
+}
+
+.asp-error, .custom-error {
+    color: red !important;
+    font-size: 0.75em;
+}
+
+.top-row {
+    /*position: relative;*/
+    overflow: hidden;
+}
+
+.bottom-align-text {
+    position: absolute;
+    bottom: 0;
+}
+
+#next-words {
+    padding-top: 3px;
+    overflow: hidden;
+    max-height: 4.5em;
+    height: 4.5em;
+}
+
+.next-word {
+    min-height: 1.5em;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.bottom-buffer {
+    margin-bottom: 5px;
+}
+
+.top-buffer {
+    margin-top: 25px;
+}
+
+.input-icons i {
+    position: absolute;
+}
+
+.input-icons {
+    width: 100%;
+}
+
+.icon {
+    padding: 5px;
+    /*min-width: 50px;*/
+    text-align: center;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
 }

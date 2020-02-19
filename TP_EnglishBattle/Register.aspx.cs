@@ -20,7 +20,8 @@ namespace TP_EnglishBattle
         {
             if (Request.IsAuthenticated)
             {
-                Response.Redirect("Default.aspx");
+                Response.Redirect("Default.aspx", true);
+                Context.ApplicationInstance.CompleteRequest();
             }
 
             _joueurService = new JoueurService();
@@ -37,7 +38,7 @@ namespace TP_EnglishBattle
                     ddl_ville.DataTextField = "nom";
                     ddl_ville.DataValueField = "id";
                     ddl_ville.DataBind();
-                    ddl_ville.Items.Insert(0, "-- Choisir ville --");
+                    ddl_ville.Items.Insert(0, new ListItem("-- Choisir Ville --", ""));
                 }
                 catch (Exception)
                 {
@@ -47,8 +48,14 @@ namespace TP_EnglishBattle
             }
         }
 
+        protected void ResetErrors()
+        {
+            err_email.Visible = false;
+        }
+
         protected void Btn_submit_OnClick(object sender, EventArgs e)
         {
+            ResetErrors();
             Page.Validate();
 
             if (!Page.IsValid)
@@ -58,6 +65,12 @@ namespace TP_EnglishBattle
 
             try
             {
+                if (_joueurService.IsEmailUsed(txt_email.Text))
+                {
+                    err_email.Visible = true;
+                    return;
+                }
+
                 Joueur joueur = new Joueur()
                 {
                     nom = txt_nom.Text,
@@ -75,7 +88,6 @@ namespace TP_EnglishBattle
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

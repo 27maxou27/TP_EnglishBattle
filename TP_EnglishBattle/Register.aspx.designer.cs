@@ -15,24 +15,6 @@ namespace TP_EnglishBattle
     {
 
         /// <summary>
-        /// alert_error_conn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_error_conn;
-
-        /// <summary>
-        /// alert_email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_email;
-
-        /// <summary>
         /// lbl_nom control.
         /// </summary>
         /// <remarks>
@@ -112,6 +94,15 @@ namespace TP_EnglishBattle
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_email;
+
+        /// <summary>
+        /// err_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl err_email;
 
         /// <summary>
         /// lbl_mdp control.

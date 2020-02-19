@@ -3,11 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="Server">
 
     <div class="form-horizontal content-wrapper">
-         <div id="alert_error_conn" runat="server" visible="false" class="row">
+         <%--<div id="alert_error_conn" runat="server" visible="false" class="row">
             <div class="alert alert-error">
                 <strong>Success!</strong> Compte crée avec l'email <span ID="alert_email" runat="server"></span>
             </div>
-        </div>
+        </div>--%>
 
         <h1 id="title">Inscription</h1>
 
@@ -17,13 +17,13 @@
                 <asp:Label ID="lbl_nom" runat="server" AssociatedControlID="txt_nom" CssClass="control-label">Nom:</asp:Label>
             </div>
             <div class="col-md-5">
-                <asp:TextBox ID="txt_nom" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txt_nom" runat="server" CssClass="form-control" MaxLength="200"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfv_nom"
                     runat="server"
                     Display="Dynamic"
                     ControlToValidate="txt_nom"
                     ErrorMessage="Le champ est requis"
-                    ForeColor="Red"></asp:RequiredFieldValidator>
+                    CssClass="asp-error"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -33,13 +33,13 @@
                 <asp:Label ID="lbl_prenom" runat="server" AssociatedControlID="txt_prenom" CssClass="control-label">Prenom:</asp:Label>
             </div>
             <div class="col-md-5">
-                <asp:TextBox ID="txt_prenom" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txt_prenom" runat="server" CssClass="form-control" MaxLength="200"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfv_prenom"
                     runat="server"
                     Display="Dynamic"
                     ControlToValidate="txt_prenom"
                     ErrorMessage="Le champ est requis"
-                    ForeColor="Red"></asp:RequiredFieldValidator>
+                    CssClass="asp-error"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -49,13 +49,14 @@
                 <asp:Label ID="lbl_email" runat="server" AssociatedControlID="txt_email" CssClass="control-label">Email:</asp:Label>
             </div>
             <div class="col-md-5">
-                <asp:TextBox ID="txt_email" runat="server" TextMode="Email" CssClass="form-control" autocomplete="off"></asp:TextBox>
+                <asp:TextBox ID="txt_email" runat="server" TextMode="Email" CssClass="form-control" autocomplete="off" MaxLength="300"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfv_email"
                     runat="server"
                     Display="Dynamic"
                     ControlToValidate="txt_email"
                     ErrorMessage="Le champ est requis"
-                    ForeColor="Red"></asp:RequiredFieldValidator>
+                    CssClass="asp-error"></asp:RequiredFieldValidator>
+                <span ID="err_email" runat="server" class="custom-error" visible="false">Cet Email est déjà utilisé</span>
             </div>
         </div>
 
@@ -65,13 +66,13 @@
                 <asp:Label ID="lbl_mdp" runat="server" AssociatedControlID="txt_mdp" CssClass="control-label">Mot de passe:</asp:Label>
             </div>
             <div class="col-md-5">
-                <asp:TextBox ID="txt_mdp" runat="server" TextMode="Password" CssClass="form-control" autocomplete="off"></asp:TextBox>
+                <asp:TextBox ID="txt_mdp" runat="server" TextMode="Password" CssClass="form-control" autocomplete="off" MaxLength="50"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfv_mdp"
                     runat="server"
                     Display="Dynamic"
                     ControlToValidate="txt_mdp"
                     ErrorMessage="Le champ est requis"
-                    ForeColor="Red"></asp:RequiredFieldValidator>
+                    CssClass="asp-error"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -88,7 +89,7 @@
                     ControlToValidate="ddl_ville"
                     ErrorMessage="Le champ est requis"
                     InitialValue=""
-                    ForeColor="Red"></asp:RequiredFieldValidator>
+                    CssClass="asp-error"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -110,7 +111,7 @@
                     ControlToValidate="ddl_niveau"
                     ErrorMessage="Le champ est requis"
                     InitialValue=""
-                    ForeColor="Red"></asp:RequiredFieldValidator>
+                    CssClass="asp-error"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -123,5 +124,15 @@
 
 
     </div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $(".custom-error").delay(3000).fadeOut()
+
+        });
+
+    </script>
 
 </asp:Content>

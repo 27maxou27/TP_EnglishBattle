@@ -24,13 +24,40 @@ namespace TP_EnglishBattle
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_success;
 
         /// <summary>
-        /// alert_email control.
+        /// user_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_email;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl user_email;
+
+        /// <summary>
+        /// alert_failure control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_failure;
+
+        /// <summary>
+        /// alert_conn_failure control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alert_conn_failure;
+
+        /// <summary>
+        /// lbl_conn_failure control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_conn_failure;
 
         /// <summary>
         /// lbl_email control.

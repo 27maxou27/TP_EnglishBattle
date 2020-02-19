@@ -15,48 +15,111 @@ namespace TP_EnglishBattle
     {
 
         /// <summary>
-        /// Score control.
+        /// hf_id_joueur control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Score;
+        protected global::System.Web.UI.WebControls.HiddenField hf_id_joueur;
 
         /// <summary>
-        /// Question control.
+        /// hf_id_partie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Question;
+        protected global::System.Web.UI.WebControls.HiddenField hf_id_partie;
 
         /// <summary>
-        /// Preterit control.
+        /// hf_niveau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Preterit;
+        protected global::System.Web.UI.WebControls.HiddenField hf_niveau;
 
         /// <summary>
-        /// ParticipeP control.
+        /// newgame_panel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ParticipeP;
+        protected global::System.Web.UI.WebControls.Panel newgame_panel;
 
         /// <summary>
-        /// Submit control.
+        /// btn_newgame control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Submit;
+        protected global::System.Web.UI.WebControls.Button btn_newgame;
+
+        /// <summary>
+        /// gameover_panel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel gameover_panel;
+
+        /// <summary>
+        /// gameover_score control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gameover_score;
+
+        /// <summary>
+        /// btn_gameover control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_gameover;
+
+        /// <summary>
+        /// game_panel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel game_panel;
+
+        /// <summary>
+        /// txt_word control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_word;
+
+        /// <summary>
+        /// txt_preterit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_preterit;
+
+        /// <summary>
+        /// txt_pp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_pp;
     }
 }

@@ -9,18 +9,16 @@ namespace TP_EnglishBattle.Data.Service
 {
     public class JoueurService
     {
-        private readonly EnglishBattle2Entities _context;
-
         public JoueurService()
         {
-            _context = new EnglishBattle2Entities();
+
         }
 
-        public Joueur GetItem(int id)
+        public Joueur GetItem(string email)
         {
-            using (_context)
+            using (var ctx = new EnglishBattle2Entities())
             {
-                var joueur = _context.Joueur.Find(id);
+                var joueur = ctx.Joueur.Where(j => j.email == email).First();
 
                 return joueur;
             }
@@ -28,28 +26,36 @@ namespace TP_EnglishBattle.Data.Service
 
         public Joueur GetItem(string email, string mdp)
         {
-            using (_context)
+            using (var ctx = new EnglishBattle2Entities())
             {
-                var joueur = _context.Joueur.FirstOrDefault(x => x.email == email && x.motDePasse == mdp);
+                var joueur = ctx.Joueur.FirstOrDefault(x => x.email == email && x.motDePasse == mdp);
 
                 return (joueur);
             }
         }
 
+        public bool IsEmailUsed(string email)
+        {
+            using (var ctx = new EnglishBattle2Entities())
+            {
+                return (ctx.Joueur.Where(x => x.email == email)).Any();
+            }
+        }
+
         public void Insert(Joueur joueur)
         {
-            using (_context)
+            using (var ctx = new EnglishBattle2Entities())
             {
-                _context.Joueur.Add(joueur);
-                _context.SaveChanges();
+                ctx.Joueur.Add(joueur);
+                ctx.SaveChanges();
             }
         }
 
         public List<Joueur> GetList()
         {
-            using (_context)
+            using (var ctx = new EnglishBattle2Entities())
             {
-                var list = _context.Joueur.ToList();
+                var list = ctx.Joueur.ToList();
 
                 return (list);
             }
@@ -57,18 +63,18 @@ namespace TP_EnglishBattle.Data.Service
 
         public void Update(Joueur joueur)
         {
-            using (_context)
+            using (var ctx = new EnglishBattle2Entities())
             {
-                _context.Entry(joueur).State = EntityState.Modified;
-                _context.SaveChanges();
+                ctx.Entry(joueur).State = EntityState.Modified;
+                ctx.SaveChanges();
             }
         }
 
         public void Delete(Joueur joueur)
         {
-            using (_context)
+            using (var ctx = new EnglishBattle2Entities())
             {
-                _context.Joueur.Attach(joueur);
+                ctx.Joueur.Attach(joueur);
 
                 var parties = joueur.Partie;
 
@@ -76,11 +82,11 @@ namespace TP_EnglishBattle.Data.Service
                 {
                     var questions = partie.Question;
 
-                    _context.Question.RemoveRange(questions);
+                    ctx.Question.RemoveRange(questions);
                 }
 
-                _context.Partie.RemoveRange(parties);
-                _context.SaveChanges();
+                ctx.Partie.RemoveRange(parties);
+                ctx.SaveChanges();
             }
         }
         

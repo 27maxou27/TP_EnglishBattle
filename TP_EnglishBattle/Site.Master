@@ -13,7 +13,27 @@
     </asp:PlaceHolder>
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
+
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/b5567fa5a1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <%--Check si le client utilise Internet Explorer pour l'alerter--%>
+    <script type="text/javascript">
+        function msieversion() {
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf("MSIE");
+
+            if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+                alert("Le jeu ne fonctionne maheureusement pas sur internet explorer :(");
+            }
+
+            return false;
+        }
+        msieversion();
+    </script>
 
 </head>
 <body>
@@ -34,6 +54,10 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
+                
+                <asp:ScriptReference Path="~/Scripts/Ressource/Timer.js" />
+                <asp:ScriptReference Path="~/Scripts/Ressource/EnglishBattle.js" />
+                    <%--<asp:ScriptReference Path="~/Scripts/Ressource/Stopwatch.js" />--%>
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
@@ -50,7 +74,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Acceuil</a></li>
+                        <li><a runat="server" href="~/Ladder">Ladder</a></li>
                     </ul>
 
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
@@ -62,15 +86,14 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <% if (this._joueur != null)
-                                    { %>
                                 <li>
-                                    <p class="navbar-text">Bienvenue, <%= _joueur.prenom %></p>
+                                    <p class="navbar-text">Bienvenue, <asp:LoginName ID="user_name" runat="server"/></p>
                                 </li>
-                                <li><p class="navbar-text">|</p></li>
-                                <% } %>
                                 <li>
-                                    <asp:LinkButton ID="lkb_disconnect" runat="server" Text="Déconnexion" OnClick="lkb_disconnect_Click"></asp:LinkButton>
+                                    <p class="navbar-text">|</p>
+                                </li>
+                                <li>
+                                    <asp:LinkButton ID="lkb_disconnect" runat="server" Text="Déconnexion" OnClick="Lkb_disconnect_Click"></asp:LinkButton>
                                 </li>
                             </ul>
                         </LoggedInTemplate>
@@ -78,19 +101,17 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content">
+        <div class="container body-content" style="height: 100vh;">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
 
                 <%-- Page inserée ici --%>
             </asp:ContentPlaceHolder>
 
-            <hr />
-
-            <footer>
+        </div>
+        <footer id="footer">
+                <hr />
                 <p>TP English Battle - &copy; <%: DateTime.Now.Year %> - EPSI B3/1</p>
             </footer>
-        </div>
-
     </form>
 </body>
 </html>

@@ -4,8 +4,20 @@
 
     <div class="form-horizontal content-wrapper">
         <div id="alert_success" runat="server" visible="false" class="row">
-            <div class="alert alert-success">
-                <strong>Success!</strong> Compte crée avec l'email <span ID="alert_email" runat="server"></span>
+            <div class="alert alert-success text-center">
+                <strong>Succès!</strong> Compte crée avec l'email <span ID="user_email" runat="server"></span>. Vous pouvez désormais vous connecter.
+            </div>
+        </div>
+
+        <div id="alert_failure" runat="server" visible="false" class="row">
+            <div class="alert alert-danger text-center">
+                <strong>Erreur:</strong> Votre identifiant ou votre mot de passe est incorrect.
+            </div>
+        </div>
+
+        <div id="alert_conn_failure" runat="server" visible="false" class="row">
+            <div class="alert alert-danger text-center">
+                <asp:Label ID="lbl_conn_failure" runat="server"></asp:Label>
             </div>
         </div>
 
@@ -17,7 +29,7 @@
                 <asp:Label ID="lbl_email" runat="server" AssociatedControlID="txt_email" CssClass="control-label">Email</asp:Label>
             </div>
             <div class="col-md-5">
-                <asp:TextBox ID="txt_email" runat="server" TextMode="Email" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txt_email" runat="server" TextMode="Email" CssClass="form-control" MaxLength="300"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfv_email"
                     runat="server"
                     Display="Dynamic"
@@ -33,7 +45,7 @@
                 <asp:Label ID="lbl_mdp" runat="server" AssociatedControlID="txt_mdp" CssClass="control-label">Mot de passe</asp:Label>
             </div>
             <div class="col-md-5">
-                <asp:TextBox ID="txt_mdp" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txt_mdp" runat="server" TextMode="Password" CssClass="form-control" MaxLength="50"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfv_mdp"
                     runat="server"
                     Display="Dynamic"

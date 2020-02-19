@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Principal;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -21,14 +22,12 @@ namespace TP_EnglishBattle
 
         void Application_BeginRequest(object sender, EventArgs e)
         {
-            string absolutepath = HttpContext.Current.Request.Url.AbsolutePath;
+                       
+        }
 
-            Debug.WriteLine(absolutepath);
-
-            //if (Request.IsAuthenticated)
-            //{
-            //    //
-            //}
+        void Application_AuthenticateRequest(object sender, EventArgs e)
+        {
+            
         }
     }
 }
